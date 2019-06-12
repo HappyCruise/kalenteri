@@ -13,6 +13,7 @@ export class Event extends Component {
     }
 
     componentDidMount() {
+        const foo = "foo";
         this.props.getData();
         console.log('Events latautui, ja hakee datan')
         //console.log(this.props.events)
