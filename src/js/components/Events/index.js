@@ -2,32 +2,32 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../../actions/index";
 import { searchEvents } from "../selectors/index";
-import { moment } from "moment";
+import moment from "moment";
 import "./Events.scss";
 
 
 //Rendered in the App.jsx
 export class Event extends Component {
-    constructor(){
+    constructor() {
         super();
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.getData();
         console.log('Events latautui, ja hakee datan')
         //console.log(this.props.events)
     }
 
     //Displays the data <button onClick={() => sortBy('name')}>Sort By Name</button>
-    render(){
-        return(
+    render() {
+        return (
             <div className="EventContainer">
-                
+
                 <ul>
                     {this.props.events.map(el => (
-                       
+
                         <li className="Event" key={el.id}>
-                            
+
                             <h1>{el.name}</h1>
 
                             <p className="shortDesc">{el.shortDescription}</p>
@@ -43,24 +43,24 @@ export class Event extends Component {
 
                             <h3>Location:</h3>
                             {el.locationDescription}
-                            
+
                             <div className="ImageContainer">
-                                <img src={el.image.url} className="Image" alt=""/>
-                            </div> 
+                                <img src={el.image.url} className="Image" alt="" />
+                            </div>
                         </li>
                     ))}
-                </ul>         
+                </ul>
             </div>
         );
     }
 }
 
 
-function mapStateToProps(state){
-    return{
+function mapStateToProps(state) {
+    return {
         events: searchEvents(state)
-       // events: state.remoteEvents.filter((event) => event.name.toLowerCase().includes(state.searchText))
-       // events: state.remoteEvents//.slice(0, 100)
+        // events: state.remoteEvents.filter((event) => event.name.toLowerCase().includes(state.searchText))
+        // events: state.remoteEvents//.slice(0, 100)
     };
 }
 
