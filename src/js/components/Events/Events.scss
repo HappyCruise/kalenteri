@@ -9,21 +9,9 @@
 }
 
 .EventContainer{
-  border: 100px;
-  color: rgb(0, 0, 0);
-  
-}
-
-
-
-.Event{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 40px;
-  background-color:rgb(230, 230, 230);
-  padding-left: 20px;
-
-  flex-direction: row;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .shortDesc{

@@ -3,24 +3,25 @@ import { connect } from "react-redux";
 import { sortEvent, ascOrDesc } from "../../actions/index"
 import "./Sort.scss";
 
-export class Sort extends Component {       
+export class Sort extends Component {
 
 
-    handleSort(event){
+    handleSort(event) {
         this.props.sortBy(event.target.value)
         //console.log(event.target.value)
     }
 
-    handleAscDesc(event){
-       // console.log(event.target.value)
+    handleAscDesc(event) {
+        // console.log(event.target.value)
         this.props.ascDesc(event.target.value)
     }
-    render(){
-        return(
+    render() {
+        return (
             <div className="SortContainer">
                 <h3>Sort by:</h3>
                 <select onChange={this.handleSort.bind(this)}>
-                    <option value="date">Date</option>
+                    <option value="begins">Date (begins)</option>
+                    <option value="ends">Date (ends)</option>
                     <option value="name">Name</option>
                 </select>
 
@@ -28,7 +29,7 @@ export class Sort extends Component {
                     <option value="asc">Ascending</option>
                     <option value="desc">Descending</option>
                 </select>
-            </div> 
+            </div>
         )
     }
 }
@@ -47,7 +48,7 @@ const mapDispatchToProps = dispatch => {
     return {
         ascDesc: event => dispatch(ascOrDesc(event)),
         sortBy: event => dispatch(sortEvent(event)),
-        
+
     }
 }
 
