@@ -5,7 +5,6 @@ import { searchEvents } from "../selectors/index";
 import moment from "moment";
 import "./Events.scss";
 
-
 //Rendered in the App.jsx
 export class Event extends Component {
     constructor() {
