@@ -5,9 +5,6 @@ import { searchEvents } from "../selectors/index";
 import moment from "moment";
 import "./Events.scss";
 
-
-
-
 //Rendered in the App.jsx
 export class Event extends Component {
     constructor() {
@@ -15,6 +12,7 @@ export class Event extends Component {
     }
 
     componentDidMount() {
+        const foo = 'bar';
         this.props.getData();
         console.log('Events latautui, ja hakee datan')
         //console.log(this.props.events)
