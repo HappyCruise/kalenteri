@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../../actions/index";
 import { searchEvents, eventsSorted } from "../selectors/index";
+import EventsNI from "../EventsNoImage/index"
 import moment from "moment";
 import "./Events.scss";
-import Event from '../Event';
+import Event from '../Event/index';
 
 
 //Rendered in the App.jsx
@@ -27,6 +28,7 @@ export class Events extends Component {
                 <div>
                     {this.props.events.map(el => (
                         <Event data={el} />
+                       // <EventsNI data={el} />
                     ))}
                 </div>
             </div>

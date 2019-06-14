@@ -12,8 +12,9 @@ const App = () => (
             <Search />
             <Sort />
             <Divider />
-            <h2 className="white">Events</h2>
+            
             <Events />
+            <Divider />
         </div>
     </div>
 );

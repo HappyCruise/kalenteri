@@ -1,0 +1,41 @@
+$width: 300px;
+
+.Search{
+    width: $width;
+    height: $width/5;
+    position: absolute;
+    margin-left:40%;
+    margin-right: 40%;
+    margin-top: 80px;    
+   &--input{
+       display: block;
+       width: 100%;
+       padding-top: 10px;
+       border: none;
+       border-radius: 0;
+       color: white;
+       background: rgb(10, 10, 10);
+       font-size: $width/15;
+       transition: 0.3s ease;
+       &:valid {
+        ~label {
+            top: 0;
+            font: 700 $width/25 Roboto;
+            color: rgba(white, .5);
+        }
+       }
+       &:focus{
+           outline:none;
+           ~label {
+               top: 0;
+               font: 700 $width/25 Roboto;
+               color: white;
+           }
+
+            ~ .bar:before {
+                transform: translateX(0);
+            }
+        }
+    }
+
+}

@@ -1,6 +1,5 @@
-
 import React, { Component } from 'react';
-import './Event.scss';
+import './index.scss';
 import moment from 'moment';
 
 class Event extends Component {
@@ -8,7 +7,6 @@ class Event extends Component {
 		const el = this.props.data;
 		return (
 			<div className="Event" key={el.id}>
-				<img src={el.image.url} className="Event--bg-image" alt="event" />
 				<div className="Event--content">
 					<span className="Event--date">{moment(el.begins).format("dddd, MMMM Do YYYY")}</span>
 					<span className="Event--name">{el.name}</span>
