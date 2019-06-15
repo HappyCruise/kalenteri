@@ -15,19 +15,17 @@ export class Events extends Component {
     }
 
     componentDidMount() {
-        const foo = "foo";
         this.props.getData();
         console.log('Events latautui, ja hakee datan')
-        //console.log(this.props.events)
     }
 
-    //Displays the data <button onClick={() => sortBy('name')}>Sort By Name</button>
+    //Displays the Events
     render() {
         return (
             <div className="EventContainer">
                 <div>
                     {this.props.events.map(el => (
-                        <Event data={el} />
+                        <Event data={el} key={el._id}/>
                        // <EventsNI data={el} />
                     ))}
                 </div>

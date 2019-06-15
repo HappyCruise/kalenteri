@@ -19,4 +19,8 @@ const App = () => (
     </div>
 );
 
+function ninja() {
+    console.log('Ninja says: Woof!')
+}
+
 export default App;

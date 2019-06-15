@@ -17,15 +17,14 @@ export class Sort extends Component {
     }
     render() {
         return (
-            <div className="SortContainer">
-                <h3>Sort by:</h3>
-                <select onChange={this.handleSort.bind(this)}>
+            <div className="Sort">
+                <select className="Sort--select" onChange={this.handleSort.bind(this)}>
                     <option value="begins">Date (begins)</option>
                     <option value="ends">Date (ends)</option>
                     <option value="name">Name</option>
                 </select>
 
-                <select onChange={this.handleAscDesc.bind(this)}>
+                <select className="Sort--select" onChange={this.handleAscDesc.bind(this)}>
                     <option value="asc">Ascending</option>
                     <option value="desc">Descending</option>
                 </select>
